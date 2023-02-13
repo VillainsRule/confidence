@@ -1,0 +1,85 @@
+<head>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titan One&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&amp;display=swap" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://confidencebot.glitch.me/commands/styles.css">
+
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+    <!-- METADATA -->
+    <title>Commands | Confidence</title>
+    <link rel="icon" href="https://cdn.discordapp.com/avatars/1037119779254829096/c7c2d5c74623a93b39ae6a948dab5b93.webp"> 
+  </head>
+  
+  <body style="background-color: #1d1433;">
+    <!--<div id="particles-js"></div>-->
+    
+    <div class="everything">
+      <text class="cmdText" id="#cmdText">Confidence | Commands</text>
+      <input type="button" id="guide" onclick="guide()" value="Usage Guide">
+      <div class="buttons">
+        <text class="mod"> Modules</text>
+        <input type="button" class="button" onclick="embed('blacket');" value="Blacket"><br>
+        <input type="button" class="button" onclick="embed('bot')" value="Bot"><br>
+        <input type="button" class="button" onclick="embed('currency')" value="Currency"><br>
+        <input type="button" class="button" onclick="embed('fun')" value="Fun"><br>
+        <input type="button" class="button" onclick="embed('util')" value="Utility">
+      </div>
+      <div class="mainDiv" id="#main"></div>
+    </div>
+  
+    <script type="text/javascript">
+      if (location.pathname === '/commands') location.href = '/commands/';
+      
+      window.onload = () => {
+        $.get("https://confidencebot.glitch.me/commands/commands.json", function(commands) {
+          window.commands = commands;
+        });
+      };
+
+      function embed(module) {
+        document.getElementById("#main").replaceChildren();
+        
+        $(`<div class="container"><div id="accordion">`).appendTo('.mainDiv');
+        
+        /*for (let i = 0; i < commands[module].commands.length; i++) {
+          $(`<div id="${commands[module].commands[i]}" class="cmdID">
+            <text class="cmdName">${commands[module].commands[i]}</text>
+            <text class="cmdInfo">${commands[module].descriptions[i]}</text>
+          </div><br>`).appendTo(".mainDiv");
+        };*/
+        
+        function note(module, i) {
+          if (commands[module][Object.keys(commands[module])[i]].note === '') return `</text></div></div></div>`
+          else return `<br><br><b>Note:</b><br>${commands[module][Object.keys(commands[module])[i]].note}</text></div></div></div>`
+        }
+        
+        function alias(module, i) {
+          if (commands[module][Object.keys(commands[module])[i]].alias === '') return ``
+          else return `<br><br><b>Alias:</b><br>${commands[module][Object.keys(commands[module])[i]].alias}`
+        }
+                
+        for (let i = 0; i < Object.keys(commands[module]).length; i++) {
+          $(`<div class="card">
+            <div class="card-header">
+              <a class="card-link cmdName" data-toggle="collapse" href="#a${i}">${Object.keys(commands[module])[i]}</a>
+            </div>
+            <div id="a${i}" class="collapse" data-parent="#accordion">
+              <div class="card-body cmdInfo"><text>${commands[module][Object.keys(commands[module])[i]].description}<br><br><b>Syntax:</b><br><code>/${commands[module][Object.keys(commands[module])[i]].syntax}</code>${alias(module, i)}${note(module, i)}`).appendTo('.mainDiv');
+          };
+        
+        $(`</div></div>`).appendTo('.mainDiv');
+      };
+
+      function guide() {
+        alert('An alias means that you can use either of the words - ie for ban and bean, you could type either and they would do the same thing.\n\nOptional: (argument) means that this argument can be ignored\n\nRequired: [argument] means that you must use this argument for the command to work.');
+      };
+      
+      //document.getElementById("#cmdText").style.animation = "rainbowText 5s linear infinite";
+    </script>
+  </body>

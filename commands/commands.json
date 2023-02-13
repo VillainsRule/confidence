@@ -1,0 +1,270 @@
+{
+  "blacket": {
+    "alt": {
+      "description": "Check if a Blacket account is an alt.",
+      "syntax": "alt (username)",
+      "note": "Leave the username blank for yourself.",
+      "alias": "altdetector"
+    },
+    "blook": {
+      "description": "Get the into on a blook.",
+      "syntax": "blook (name, case matters)",
+      "note": "Leave name blank for a random Blook.",
+      "alias": ""
+    },
+    "blooks": {
+      "description": "Get the blooks of a user.",
+      "syntax": "blooks (username)",
+      "note": "Leave the username blank for yourself.",
+      "alias": ""
+    },
+    "booster": {
+      "description": "Get information about the current booster.",
+      "syntax": "booster",
+      "note": "",
+      "alias": "boost"
+    },
+    "gamelb": {
+      "description": "Get everything you need from the leaderboard, without leaving chat.",
+      "syntax": "gamelb [tokens or exp]",
+      "note": "",
+      "alias": ""
+    },
+    "missingblooks": {
+      "description": "Get the missing blooks of a user.",
+      "syntax": "missingblooks (username)",
+      "note": "Leave the username blank for yourself.",
+      "alias": "mb"
+    },
+    "net": {
+      "description": "Get the net worth of a user.",
+      "syntax": "net (username)",
+      "note": "Leave the username blank for yourself.",
+      "alias": "networth"
+    },
+    "pack": {
+      "description": "Get the info on a pack.",
+      "syntax": "pack (name, case matters)",
+      "note": "Leave the pack name blank for a list.",
+      "alias": ""
+    },
+    "user": {
+      "description": "Dig deep into a user's stats.",
+      "syntax": "user (username)",
+      "note": "Leave the username blank for yourself.",
+      "alias": "stats"
+    }
+  },
+  "bot": {
+    "config": {
+      "description": "Get Confidence's current configuration.",
+      "syntax": "config",
+      "note": "",
+      "alias": ""
+    },
+    "discord": {
+      "description": "Join the Discord!",
+      "syntax": "discord",
+      "note": "",
+      "alias": ""
+    },
+    "help": {
+      "description": "Go here :)",
+      "syntax": "help",
+      "note": "",
+      "alias": "commands"
+    },
+    "level": {
+      "description": "Learn your XP amount from chatting.",
+      "syntax": "level (user)",
+      "note": "Leave the user blank for yourself.",
+      "alias": ""
+    },
+    "myprefix": {
+      "description": "Manage YOUR custom prefix.",
+      "syntax": "myprefix (prefix)",
+      "note": "This is YOUR prefix, and only works for you. / is a global prefix that works for everyone.",
+      "alias": ""
+    },
+    "perm": {
+      "description": "<strike>show how important you are</strike> Show your permission level.",
+      "syntax": "perm (username)",
+      "note": "Leave the username blank for yourself.",
+      "alias": ""
+    }
+  },
+  "currency": {
+    "balance": {
+      "description": "Get a user's, or your, balance.",
+      "syntax": "balance (username)",
+      "note": "Leave the username blank for yourself.",
+      "alias": "bal"
+    },
+    "coinlb": {
+      "description": "Get the top 3 people with cash.",
+      "syntax": "coinlb",
+      "note": "",
+      "alias": ""
+    },
+    "convert": {
+      "description": "Convert your <b>Confidence</b> XP to <b>Confidence</b> coins.",
+      "syntax": "convert [amount]",
+      "note": "The amount can be 'max' or 'all'.",
+      "alias": ""
+    },
+    "crime": {
+      "description": "Attempt to commit a crime - can you get away with the cash?",
+      "syntax": "crime",
+      "note": "1/2 chance of success.",
+      "alias": ""
+    },
+    "daily": {
+      "description": "Redeem daily coins in the bot!",
+      "syntax": "daily",
+      "note": "You can get between 135K and 165K with this command.",
+      "alias": ""
+    },
+    "deposit": {
+      "description": "Deposit coins to your bank.",
+      "syntax": "deposit [amount]",
+      "note": "The bank is unrobbable. Always deposit.",
+      "alias": "dep"
+    },
+    "friends": {
+      "description": "Manage your friends.",
+      "syntax": "friends [subcommand]",
+      "note": "Run /friends for a list of subcommands.",
+      "alias": "friend"
+    },
+    "inventory": {
+      "description": "Get a list of items you have.",
+      "syntax": "inventory",
+      "note": "",
+      "alias": "inv"
+    },
+    "item": {
+      "description": "Get the info on an item.",
+      "syntax": "item [name]",
+      "note": "",
+      "alias": ""
+    },
+    "multis": {
+      "description": "Buy and manage coin/XP multipliers.",
+      "syntax": "multis [subcommand]",
+      "note": "There are a ton of subcommands. Run the command for more info.",
+      "alias": ""
+    },
+    "sell": {
+      "description": "Sell an item you have.",
+      "syntax": "sell [name]",
+      "note": "",
+      "alias": ""
+    },
+    "withdraw": {
+      "description": "Withdraw coins to your pocket.",
+      "syntax": "deposit [amount]",
+      "note": "The pocket is robbable, but you must withdraw to spend or share.",
+      "alias": "with"
+    },
+    "work": {
+      "description": "Gives you some guaranteed cash.",
+      "syntax": "work",
+      "note": "",
+      "alias": ""
+    }
+  },
+  "fun": {
+    "8ball": {
+      "description": "Spin a magic 8 ball to answer your question.",
+      "syntax": "8ball [question]",
+      "note": "",
+      "alias": ""
+    },
+    "ask": {
+      "description": "Ask AI a question.",
+      "syntax": "ask [question]",
+      "note": "",
+      "alias": ""
+    },
+    "ban": {
+      "description": "Pretend to ban a user.",
+      "syntax": "ban [user] (reason)",
+      "note": "THIS IS FAKE.",
+      "alias": "bean"
+    },
+    "claim": {
+      "description": "Claim my daily rewards!",
+      "syntax": "claim",
+      "note": "Nothing will be given to the claimer (lol)",
+      "alias": ""
+    },
+    "coinflip": {
+      "description": "Flip a random coin to end a fight.",
+      "syntax": "coinflip",
+      "note": "",
+      "alias": "flip"
+    },
+    "gay": {
+      "description": "Checks how gay a user is.",
+      "syntax": "gay (user)",
+      "note": "Leave the user blank for yourself.",
+      "alias": ""
+    },
+    "hack": {
+      "description": "Hack a user (REAL)",
+      "syntax": "hack [user]",
+      "note": "This is fake, just like ban LMFAO",
+      "alias": ""
+    },
+    "ip": {
+      "description": "Get a user's IP.",
+      "syntax": "ip (username)",
+      "note": "Leave the username blank for yourself.",
+      "alias": ""
+    },
+    "pp": {
+      "description": "Check a user's pp size.",
+      "syntax": "pp (username)",
+      "note": "Leave the username blank for yourself.",
+      "alias": ""
+    },
+    "ship": {
+      "description": "See how well two users match.",
+      "syntax": "ship [first user] [second user]",
+      "note": "",
+      "alias": ""
+    }
+  },
+  "util": {
+    "math": {
+      "description": "Solve a math equation.",
+      "syntax": "math [equation]",
+      "note": "",
+      "alias": ""
+    },
+    "play": {
+      "description": "Play music.",
+      "syntax": "play [song]",
+      "note": "",
+      "alias": ""
+    },
+    "poll": {
+      "description": "Create and manage polls!",
+      "syntax": "poll [subcommand]",
+      "note": "",
+      "alias": ""
+    },
+    "random": {
+      "description": "Get a random string or number.",
+      "syntax": "random [subcommand]",
+      "note": "Run the command for more info.",
+      "alias": ""
+    },
+    "skip": {
+      "description": "Voteskip a song currently playing (with /play).",
+      "syntax": "skip",
+      "note": "",
+      "alias": ""
+    }
+  }
+}

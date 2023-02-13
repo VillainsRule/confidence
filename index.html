@@ -1,0 +1,64 @@
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="/home/style.css">
+
+  <title>Confidence | The #1 Blacket Chatbot</title>
+  <link rel="icon" href="https://cdn.discordapp.com/avatars/1037119779254829096/c7c2d5c74623a93b39ae6a948dab5b93.webp">
+</head>
+
+<body style="background-color: #1d1433;">
+  <div id="particles-js"></div>
+  <script src="/home/particles.js"></script>
+
+  <div class="arts__body___3acI_-camelCase">
+    <div class="styles__holder___1jARs-camelCase">
+      <div class="styles__headerContainer___sjd3P-camelCase">
+        <div class="styles__background___2J-JA-camelCase">
+          <div class="styles_image_cont"><img class="styles_image" width="400" src="https://cdn.discordapp.com/avatars/1037119779254829096/c7c2d5c74623a93b39ae6a948dab5b93.webp"></div>
+          <br>
+          <div class="styles__logoText___1eUDm-camelCase" style="line-height: 6vw;">I am Confidence.</div>
+          <div class="styles__welcomeDesc___OyjZk-camelCase" id="desc">Confidence is the #1 Blacket chatbot, serving you in every way.<br>From a currency all the way to music, Confidence has you covered.</div>
+          <br>
+          <div style="display: flex;flex-flow: row wrap;justify-content: center;">
+            <a class="styles__welcomeButton___39pgl-camelCase" href="/commands">Commands</a>
+            <a class="styles__welcomeButton___39pgl-camelCase" href="/rules">Bot Rules</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="styles__copyrightInformation___f4Dky-camelCase">Confidence is NOT an official part of Blacket.<br>Do not contact Blacket for reasons relating to Confidence.</div>
+  </div>
+
+  <script>
+    function module() {
+      function random(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+      }
+
+      entries = {
+        Blacket: 'https://cdn.discordapp.com/emojis/1062896985335681075.webp?size=240&quality=lossless',
+        Currency: 'https://cdn.discordapp.com/emojis/1021646866200399892.webp?size=240&quality=lossless',
+        Fun: 'https://cdn.discordapp.com/emojis/1060707169688883210.gif?size=96&quality=lossless',
+        Polls: 'https://cdn.discordapp.com/emojis/1063920999319482368.webp?size=240&quality=lossless',
+        Music: 'https://cdn.discordapp.com/emojis/1063925598331863231.webp?size=240&quality=lossless',
+        Multipliers: 'https://cdn.discordapp.com/emojis/1057064354756972708.webp?size=240&quality=lossless',
+        'Blook Store': 'https://cdn.discordapp.com/emojis/1016501315989405796.webp?size=96&quality=lossless'
+      }
+
+      let rnd = random(0, Object.keys(entries).length - 1);
+
+      return {
+        name: Object.keys(entries)[rnd],
+        img: Object.values(entries)[rnd]
+      }
+    }
+
+    let entry = module()
+    //document.getElementById('desc').innerHTML = `Confidence is the #1 Blacket chatbot, serving you in every module.<br><br>${entry.name}<br><!--<img src="${entry.img}" width="30px">-->`
+
+    /*setInterval(() => {
+      entry = module()
+      document.getElementById('desc').innerHTML = `Confidence is the #1 Blacket chatbot, serving you in every module.<br><br>${entry.name}<br><!--<img src="${entry.img}" width="30px">-->`
+    }, 1000);*/
+  </script>
+</body>
